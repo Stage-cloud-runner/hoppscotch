@@ -50,7 +50,6 @@ postMerge :
         configFile : "./jest.config.js" 
         
         
-        
 preMerge : 
   
   subModules:          #Not to be changed
