@@ -20,23 +20,6 @@ postMerge :
         configFile : "./jest.config.js"
       
         
-      - name: hoppscotch-cli      
-        path : "./packages/hoppscotch-cli/"
-        pattern: 
-          - "./src/__tests__/**/*.spec.ts"
-        
-        framework : jest
-        
-        preRun:
-          command:
-            - npm run prepublish
-            - npm run do-typecheck
-        
-        postRun:
-            command:
-              - node --version 
-        configFile : "./jest.config.ts"
-        
       - name: hoppscotch-js-sandbox     
         path : "./packages/hoppscotch-js-sandbox/"
         pattern: 
@@ -92,3 +75,4 @@ preMerge :
 parallelism: 2 # this will be depricated in future
 version : 2.0
 nodeVersion: 16.15.0
+tier: large
